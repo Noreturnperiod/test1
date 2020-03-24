@@ -68,16 +68,143 @@
 //	printf("10个整数中最大的是：%d\n",arr[0]);
 //	return 0;
 //}
-int main()
+//int main()
+//{
+//	int i, j;
+//	for (j = 1; j <= 9; j++)
+//	{
+//		for (i = 1; i <= j; i++)
+//		{
+//			printf("%d*%d=%d\t", i, j, i*j);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10};
+//	int left = 0;
+//	int right = sizeof(arr) / sizeof(arr[0]) - 1;
+//	int key = 7;
+//	int mid = 0;
+//	while (left <= right)
+//	{
+//		mid = (left + right) / 2;
+//		if (arr[mid] > key)
+//		{
+//			right = mid - 1;
+//		}
+//		else if (arr[mid] < key)
+//		{
+//			left = mid + 1;
+//		}
+//		else
+//			break;
+//	}
+//	if (left <= right)
+//		printf("找到了，下标为：%d\n", mid);
+//	else
+//		printf("找不到\n");
+//	return 0;
+//}
+//int main()
+//{
+//	int n = 0;
+//	int i = 1;
+//	int ret = 1;
+//	int sum = 0;
+//	for (n = 1; n <= 7; n++)
+//	{
+//		ret = 1;
+//		for (i = 1; i <= n; i++)
+//		{
+//			ret = ret*i;
+//		}
+//		sum = sum + ret;
+//	}
+//	printf("%d\n",sum);
+//	return 0;
+//}
+//int main()
+//{
+//	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int k = 7;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int i = 0;
+//	for (i = 0; i < sz; i++)
+//	{
+//		if (arr[i] == k)
+//		{
+//			printf("找到了，下标是：\n", i);
+//			break;
+//		}
+//	}
+//	if (i == sz)
+//	{
+//		printf("找不到了\n");
+//	}
+//	return 0;
+//}
+//#include <stdlib.h>
+//#include <time.h>
+//void menu()
+//{
+//	printf("***************************\n");
+//	printf("****  1.play   0.exit  ****\n");
+//	printf("***************************\n");
+//}
+//void game()
+//{
+//	int guess = 0;
+//	int ret = rand() % 100 + 1;
+//	while (1)
+//	{
+//		printf("请输入要猜的数字<:");
+//		scanf("%d",&guess);
+//		if (guess > ret)
+//		{
+//			printf("猜大了\n");
+//		}
+//		else if (guess < ret)
+//		{
+//			printf("猜小了\n");
+//		}
+//		else
+//		{
+//			printf("恭喜你，猜对了！\n");
+//			break;
+//		}
+//	}
+//}
+//int main()
+//{
+//	int input = 0;
+//    srand((unsigned int)time(NULL));
+//	do
+//	{
+//		menu();
+//		printf("请选择：<\n");
+//		scanf("%d",&input);
+//		switch (input)
+//		{
+//		case 1:
+//			game();
+//			break;
+//		case 0:
+//			break;
+//		default:
+//			printf("选择错误，请重新选择\n");
+//			break;
+//		}
+//	} while (input);
+//	return 0;
+//}
+int is_leap_year(int n)
 {
-	int i, j;
-	for (j = 1; j <= 9; j++)
+	if ((n % 400 == 0) || (n % 4 == 0 && n % 100 != 0))
 	{
-		for (i = 1; i <= j; i++)
-		{
-			printf("%d*%d=%d\t", i, j, i*j);
-		}
-		printf("\n");
+		return 1;
 	}
 	return 0;
 }
