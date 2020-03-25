@@ -75,7 +75,7 @@
 //int main()
 //{
 //	int n = 0;
-//	printf("请输入选择的行数<:\n");
+//	printf("脟毛脢盲脠毛脩隆脭帽碌脛脨脨脢媒<:\n");
 //	scanf("%d",&n);
 //	mul(n);
 //	return 0;
